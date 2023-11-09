@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/home.css">
+    <link rel="stylesheet" href="../public/icon/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="icon" href="../public/image/logo/favicon.ico">
+    <link rel="stylesheet" href="../public/css/homeCssBasedWidth.css">
+    <script src="../../dist/typesript/home.js"></script>
+    <title>Home Page</title>
+</head>
+
+<body>
+    <login onclick="handleCloseTableLogin(event)" id="login_id" class="login ">
+        <div class="content_login">
+            <i onclick="handleOnlickCloseLogin()" id="title_and_close_icon_id"
+                class="fa-solid fa-xmark title_and_close_icon"></i>
+            <div class="header_login">
+                <span class="content_login_span">Login</span>
+            </div>
+            <div class="body_login">
+                <input id="body_login_input_idEmail" class="body_login_input" type="text" placeholder="Email">
+                <div class="body_login_child">
+                    <input id="body_login_input_idPassword" class="body_login_input" type="password"
+                        placeholder="Password">
+                    <i onclick="handleshowPasswordEye()" id="body_login_child_icon_eye"
+                        class="fa-solid fa-eye body_login_child_icon displayNone "></i>
+                    <i onclick="handleshowPasswordEyeSlash()" id="body_login_child_icon_eye_slash"
+                        class="fa-solid fa-eye-slash body_login_child_icon "></i>
+                </div>
+            </div>
+            <button id="content_login_btn_id" onclick="handleTakeValueInput()" class="content_login_btn">
+                login
+            </button>
+        </div>
+    </login>
+    <register onclick="handleCloseTableRegister(event)" id="register_id" class="register displayNone">
+        <div class="content_register">
+            <div class="header_login">
+                <span class="content_register_span">Register</span>
+            </div>
+            <div class="ngan_cach">
+
+            </div>
+            <div class="container_avatar_full">
+                <img id="container_avatar_full_img_id" class="container_avatar_full_img"
+                    src="../public/image/login/hoangquan.gif" alt="">
+            </div>
+            <div class="content_chooseImage">
+                <img id="content_chooseImage_img_id" onclick="handleShowImgRegister('1')" number="1"
+                    class="content_chooseImage_img" src="../public/image/login/0106_hinh-nen-4k-may-tinh47.jpg" alt="">
+                <img id="content_chooseImage_img_id" onclick="handleShowImgRegister('2')" number="2"
+                    class="content_chooseImage_img" src="../public/image/login/0106_hinh-nen-may-tinh-full-hd43.jpg"
+                    alt="">
+                <img id="content_chooseImage_img_id" onclick="handleShowImgRegister('3')" number="3"
+                    class="content_chooseImage_img"
+                    src="../public/image/login/13_999-hinh-nen-tai-mien-phi-full-hd-1920x1080-dep-2k-4k-8k-da-chu-de.jpg"
+                    alt="">
+                <img id="content_chooseImage_img_id" onclick="handleShowImgRegister('4')" number="4"
+                    class="content_chooseImage_img"
+                    src="../public/image/login/375664217_1342574439951213_3914003967176323577_n.jpg" alt="">
+                <img id="content_chooseImage_img_id" onclick="handleShowImgRegister('5')" number="5"
+                    class="content_chooseImage_img" src="../public/image/login/anh pc all.png" alt="">
+                <img id="content_chooseImage_img_id" onclick="handleShowImgRegister('6')" number="6"
+                    class="content_chooseImage_img" src="../public/image/login/Anh-IU.jpg" alt="7">
+                <img id="content_chooseImage_img_id" onclick="handleShowImgRegister('7')" number="7"
+                    class="content_chooseImage_img"
+                    src="../public/image/login/bo-suu-tap-nhung-con-meo-dep-nhat-cho-hinh-nen-may-tinh-va-dien-thoai-8.jpeg"
+                    alt="">
+                <img id="content_chooseImage_img_id" onclick="handleShowImgRegister('8')" number="8"
+                    class="content_chooseImage_img" src="../public/image/login/Hoàng Quân.jpg" alt="">
+                <img id="content_chooseImage_img_id" onclick="handleShowImgRegister('9')" number="9"
+                    class="content_chooseImage_img" src="../public/image/login/Hình-nền-máy-tính-3d-sáng-tạo.jpg"
+                    alt="">
+                <img id="content_chooseImage_img_id" onclick="handleShowImgRegister('10')" number="10"
+                    class="content_chooseImage_img" src="../public/image/login/quang_cao.png" alt="">
+                <img id="content_chooseImage_img_id" onclick="handleShowImgRegister('11')" number="11"
+                    class="content_chooseImage_img" src="../public/image/login/sleepy_kitten-1920x1080.jpg" alt="">
+                <img id="content_chooseImage_img_id" onclick="handleShowImgRegister('12')" number="12"
+                    class="content_chooseImage_img" src="../public/image/login/thuylinh.jpg" alt="">
+            </div>
+            <div class="ngan_cach">
+
+            </div>
+            <div class="container_firstName_lastName">
+                <input id="body_register_input_idFirstName" class="body_register_input" type="text"
+                    placeholder="firstName">
+
+                <input id="body_register_input_idLastName" class="body_register_input" type="text"
+                    placeholder="lastName">
+            </div>
+            <div class="container_email_password">
+                <input id="body_register_input_idEmail" class="body_register_input" type="text" placeholder="Email">
+
+                <input id="body_register_input_idPassword" class="body_register_input" type="text"
+                    placeholder="Password">
+            </div>
+            <div class="container_phoneNumber_enterThePassword">
+                <input id="body_register_input_idPhoneNumber" class="body_register_input" type="text"
+                    placeholder="Phone Number">
+                <input id="body_register_input_identerThePassword" class=" body_register_input" type="text"
+                    placeholder="Enter the password">
+            </div>
+            <button id="content_register_btn_id" onclick="handleRegisterNewAccount()" class="content_register_btn">
+                Register
+            </button>
+        </div>
+    </register>
+    <div onclick="handleCloseUserInformation(event)" id="User_inpromation_id" class="User_inpromation displayNone">
+
+    </div>
+    <header class="header ">
+        <div class="header_left">
+            <img class="circle" src="../public/image/logo/logo.png" alt="logo">
+            <span class="title">LEARN ENGLISH</span>
+        </div>
+        <div class="header_right">
+            <ul class="header_right_ul">
+                <li id="header_right_li_notifications_id" class="header_right_li_notification notification">
+                    Thông báo
+                    <div id="number_of_notifications" class="number_of_notifications">
+                        1
+                    </div>
+                </li>
+                <li onclick="handleShowTableRegister()" id="header_right_li_register_id"
+                    class="header_right_li loginLi ">Đăng ký
+                </li>
+                <li onclick="handleShowTableLogin()" id="header_right_li_id" class="header_right_li loginLi ">Đăng nhập
+                </li>
+                <li id="header_right_li_login_id" class="header_right_li_login ">
+
+                </li>
+            </ul>
+        </div>
+        <div class="header_menu ">
+            <button class="header_menu_icon" id="menuButton" aria-haspopup="true" aria-expanded="false">
+                <i class="fa-solid fa-bars header_menu_icon "></i>
+            </button>
+            <div class="menu_dropdown displayNone" id="menuDropdown">
+                <ul class="header_right_ul">
+                    <li class="header_right_li notification">Thông báo</li>
+                    <li onclick="handleShowTableLogin()" id="header_right_li_id_2" class="header_right_li loginLi ">Đăng
+                        nhập
+                    </li>
+                    <li id="header_right_li_login_id_2" class="header_right_li_login ">
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <container class="container ">
+        <div id="gird-8_id" class="gird-8">
+            <div class="course">
+                <div id="course_elocution_id" class="course_elocution">
+                    <span id="course_title_id" class="course_title">Ngữ Pháp Cơ Bản</span> <br>
+                    <img id="course_image_id" class="course_image"
+                        src="../public/image/course/ngu-phap-co-ban_1539663532.png" alt="Ngữ Pháp Cơ Bản">
+                    <p id="course_content" class="course_content">Nắm vững các kiến thức ngữ pháp<br> cơ bản trong tiếng
+                        Anh.</p>
+                    <button id="course_btn_id" class="course_btn"
+                        onclick="handleOnclickLearnCourseEnglish('elocution')">Học
+                        ngay</button>
+                </div>
+                <div class="course_vocabulary">
+                    <span class="course_title">1000 Từ Vựng Cơ Bản</span> <br>
+                    <img class="course_image" src="../public/image/course/1000-tu-vung-tieng-anh-co-ban_1538706416.png"
+                        alt="1000 Từ Vựng Cơ Bản">
+                    <p class="course_content">Ghi nhớ nhanh hơn 1000 từ vựng cơ bản với <br>các game tương tác.</p>
+                    <button id="course_btn_id" class="course_btn"
+                        onclick="handleOnclickLearnCourseEnglish('vocabulary')">Học
+                        ngay</button>
+                </div>
+            </div>
+            <div class="course">
+                <div class="course_pronounce">
+                    <span class="course_title">Khóa Phát Âm Cơ Bản</span> <br>
+                    <img class="course_image" src="../public/image/course/khoa-phat-am-co-ban_1548821170.png"
+                        alt="Khóa Phát Âm Cơ Bản">
+                    <p class="course_content">Cung cấp các kiến thức về phát âm từ <br>cơ bản tới nâng cao</p>
+                    <button id="course_btn_id" class="course_btn"
+                        onclick="handleOnclickLearnCourseEnglish('pronounce')">Học
+                        ngay</button>
+                </div>
+                <div class="course_communicate">
+                    <span class="course_title">Tiếng Anh Giao Tiếp Cơ Bản</span> <br>
+                    <img class="course_image" src="../public/image/course/tieng-anh-giao-tiep-co-ban_1557809625.png"
+                        alt="Tiếng Anh Giao Tiếp Cơ Bản">
+                    <p class="course_content">Giao tiếp từ cơ bản đến nâng cao qua 60 <br>tình huống thường gặp trong
+                        đời.
+                        sống.</p>
+                    <button id="course_btn_id" class="course_btn"
+                        onclick="handleOnclickLearnCourseEnglish('communicate')">Học
+                        ngay</button>
+                </div>
+            </div>
+        </div>
+        <div id="gird-8-lessons_id" class="gird-8-lessons displayNone">
+            <div onclick="handleOnclickBack()" class="gird-8-lessons_back">
+                <i class="fa-solid fa-arrow-left"></i>
+                Quay lại
+            </div>
+            <div class="lessons">
+                <div id="container_lessons_list_id" class="container_lessons_list"></div>
+            </div>
+        </div>
+        <div id="gird-2_id" class="gird-2">
+            <div>
+                <div onclick="handleShowHonors()" class="content_point_gird_2">
+                    <img class="image_loading" src="../public/image/loading/loading.gif" alt="">
+                </div>
+                <div class="container_progressbar_point">
+                    <div id="content_progressbar_point_id" class="content_progressbar_point ">
+                        <span class="content_progressbar_point_child_text">loading...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ngan_cach">
+
+            </div>
+            <div class="Leaderboard">
+                <div class="Leaderboard_header">
+                    Bảng xếp hạng
+                </div>
+                <div class="Leaderboard_content" style="overflow: auto; max-height: 300px;">
+                    <ul class="Leaderboard_content_ul">
+                        <li class="Leaderboard_content_li">
+                            <span id="Leaderboard_content_li_STT_id_top1" class="Leaderboard_content_li_STT">1 :</span>
+                            <img class="Leaderboard_content_li_img"
+                                src="../public/image/progressbar/white-2484120_640.webp" alt="">
+                            <span class="Leaderboard_content_li_name">
+                                Hà Hoàn......
+                            </span>
+                            <span class="Leaderboard_content_li_point">
+                                000
+                                <i class="fa-solid fa-star Leaderboard_content_li_point_icon"></i>
+                            </span>
+                        </li>
+                        <li class="Leaderboard_content_li">
+                            <span id="Leaderboard_content_li_STT_id_top2" class="Leaderboard_content_li_STT">2 :</span>
+                            <img class="Leaderboard_content_li_img"
+                                src="../public/image/progressbar/white-2484120_640.webp" alt="">
+                            <span class="Leaderboard_content_li_name">
+                                thùy li......
+                            </span>
+                            <span class="Leaderboard_content_li_point">
+                                000
+                                <i class="fa-solid fa-star Leaderboard_content_li_point_icon"></i>
+                            </span>
+                        </li>
+                        <li class="Leaderboard_content_li">
+                            <span id="Leaderboard_content_li_STT_id_top3" class="Leaderboard_content_li_STT">3 :</span>
+                            <img class="Leaderboard_content_li_img"
+                                src="../public/image/progressbar/white-2484120_640.webp" alt="">
+                            <span class="Leaderboard_content_li_name">
+                                hoan......
+                            </span>
+                            <span class="Leaderboard_content_li_point">
+                                000
+                                <i class="fa-solid fa-star Leaderboard_content_li_point_icon"></i>
+                            </span>
+                        </li>
+                        <li class="Leaderboard_content_li">
+                            <span id="Leaderboard_content_li_STT_id_topvv" class="Leaderboard_content_li_STT"><span
+                                    style="margin: 0px 5px 0px 0px;">4</span> : </span>
+                            <img class="Leaderboard_content_li_img"
+                                src="../public/image/progressbar/white-2484120_640.webp" alt="">
+                            <span class="Leaderboard_content_li_name">
+                                hoan......
+                            </span>
+                            <span class="Leaderboard_content_li_point">
+                                000
+                                <i class="fa-solid fa-star Leaderboard_content_li_point_icon"></i>
+                            </span>
+                        </li>
+                        <li class="Leaderboard_content_li">
+                            <span id="Leaderboard_content_li_STT_id_topvv" class="Leaderboard_content_li_STT"><span
+                                    style="margin: 0px 5px 0px 0px;">5</span> : </span>
+                            <img class="Leaderboard_content_li_img"
+                                src="../public/image/progressbar/white-2484120_640.webp" alt="">
+                            <span class="Leaderboard_content_li_name">
+                                hoan......
+                            </span>
+                            <span class="Leaderboard_content_li_point">
+                                000
+                                <i class="fa-solid fa-star Leaderboard_content_li_point_icon"></i>
+                            </span>
+                        </li>
+                        <li class="Leaderboard_content_li">
+                            <span id="Leaderboard_content_li_STT_id_topvv" class="Leaderboard_content_li_STT"><span
+                                    style="margin: 0px 5px 0px 0px;">6</span> : </span>
+                            <img class="Leaderboard_content_li_img"
+                                src="../public/image/progressbar/white-2484120_640.webp" alt="">
+                            <span class="Leaderboard_content_li_name">
+                                hoan......
+                            </span>
+                            <span class="Leaderboard_content_li_point">
+                                000
+                                <i class="fa-solid fa-star Leaderboard_content_li_point_icon"></i>
+                            </span>
+                        </li>
+                        <li class="Leaderboard_content_li">
+                            <span id="Leaderboard_content_li_STT_id_topvv" class="Leaderboard_content_li_STT"><span
+                                    style="margin: 0px 5px 0px 0px;">7</span> : </span>
+                            <img class="Leaderboard_content_li_img"
+                                src="../public/image/progressbar/white-2484120_640.webp" alt="">
+                            <span class="Leaderboard_content_li_name">
+                                hoan......
+                            </span>
+                            <span class="Leaderboard_content_li_point">
+                                000
+                                <i class="fa-solid fa-star Leaderboard_content_li_point_icon"></i>
+                            </span>
+                        </li>
+                        <li class="Leaderboard_content_li">
+                            <span id="Leaderboard_content_li_STT_id_topvv" class="Leaderboard_content_li_STT"><span
+                                    style="margin: 0px 5px 0px 0px;">8</span> : </span>
+                            <img class="Leaderboard_content_li_img"
+                                src="../public/image/progressbar/white-2484120_640.webp" alt="">
+                            <span class="Leaderboard_content_li_name">
+                                hoan......
+                            </span>
+                            <span class="Leaderboard_content_li_point">
+                                000
+                                <i class="fa-solid fa-star Leaderboard_content_li_point_icon"></i>
+                            </span>
+                        </li>
+                        <li class="Leaderboard_content_li">
+                            <span id="Leaderboard_content_li_STT_id_topvv" class="Leaderboard_content_li_STT"><span
+                                    style="margin: 0px 5px 0px 0px;">9</span> : </span>
+                            <img class="Leaderboard_content_li_img"
+                                src="../public/image/progressbar/white-2484120_640.webp" alt="">
+                            <span class="Leaderboard_content_li_name">
+                                hoan......
+                            </span>
+                            <span class="Leaderboard_content_li_point">
+                                000
+                                <i class="fa-solid fa-star Leaderboard_content_li_point_icon"></i>
+                            </span>
+                        </li>
+                        <li class="Leaderboard_content_li">
+                            <span id="Leaderboard_content_li_STT_id_topvv" class="Leaderboard_content_li_STT"><span
+                                    style="margin: 0px 5px 0px 0px;">10</span> : </span>
+                            <img class="Leaderboard_content_li_img"
+                                src="../public/image/progressbar/white-2484120_640.webp" alt="">
+                            <span class="Leaderboard_content_li_name">
+                                hoan......
+                            </span>
+                            <span class="Leaderboard_content_li_point">
+                                000
+                                <i class="fa-solid fa-star Leaderboard_content_li_point_icon"></i>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ngan_cach">
+
+                </div>
+                <div>
+                    <img style="width: 300px; height: 300px; border-radius: 10px; "
+                        src="../public/image/logo/quang_cao.png" alt="quang_cao">
+                </div>
+            </div>
+        </div>
+        <div id="start_learn_id" class="start_learn displayNone ">
+            <div class="table_of_contents ">
+                <ul class="table_of_contents_ul">
+                    <li id="table_of_contents-id" onclick="handleOnclickShowBtnBack()" class="table_of_contents_li">
+                        <i class="fa-solid fa-backward table_of_contents_icon"></i>
+                        Quay lại
+                    </li>
+                    <li id="table_of_contents-id" number="1" onclick="handleOclickActiveAndShowContentLearn('1')"
+                        class="table_of_contents_li-active">
+                        <i class="fa-solid fa-book table_of_contents_icon"></i>
+                        Học từ
+                    </li>
+                    <br>
+                    <li id="table_of_contents-id" number="2" onclick="handleOclickActiveAndShowContentLearn('2')"
+                        class="table_of_contents_li">
+                        <i class="fa-solid fa-a table_of_contents_icon"></i>
+                        Diền từ
+                    </li>
+                    <br>
+                    <li id="table_of_contents-id" number="3" onclick="handleOclickActiveAndShowContentLearn('3')"
+                        class="table_of_contents_li">
+                        <i class="fa-solid fa-file-pen table_of_contents_icon"></i>
+                        Dịch từ
+                    </li>
+                    <br>
+                    <li id="table_of_contents-id" number="4" onclick="handleOclickActiveAndShowContentLearn('4')"
+                        class="table_of_contents_li">
+                        <i class="fa-solid fa-border-all table_of_contents_icon"></i>
+                        Chọn đáp án
+                    </li>
+                    <br>
+                    <li id="table_of_contents-id" number="5" onclick="handleOclickActiveAndShowContentLearn('5')"
+                        class="table_of_contents_li">
+                        <i class="fa-solid fa-ear-listen table_of_contents_icon"></i>
+                        Nghe từ
+                    </li>
+                    <br>
+                    <li id="table_of_contents-id" number="6" onclick="handleOclickActiveAndShowContentLearn('6')"
+                        class="table_of_contents_li">
+                        <i class="fa-solid fa-microphone-lines table_of_contents_icon"></i>
+                        Ghi âm
+                    </li>
+                </ul>
+            </div>
+            <div class="content_learn">
+                <div class="content_course_elocution">
+                    <div class="progressbar">
+                        <div id="progressbar-child_id" style="width: 0;" class="progressbar-child"></div>
+                    </div>
+                    <div id="content_middble_id" number="1" class="content_middble">
+                    </div>
+                    <audio id="content_img_audio_audio_id_true" controls class="content_img_audio_audio displayNone">
+                        <source src="../public/audio/trueAndFalse/true.mp3" type="audio/mpeg">
+                    </audio>
+                    <audio id="content_img_audio_audio_id_false" controls class="content_img_audio_audio displayNone ">
+                        <source src="../public/audio/trueAndFalse/false.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <div id="notification" class="notification_and_result ">
+                        <span id="notification_text" class="notification_and_result_text"></span>
+                        <button id="btn_result_id_KiemTra" onclick="handleOnclickShowBtn()"
+                            class="notification_and_result_btn ">
+                            Kiểm tra
+                        </button>
+                        <button id="btn_result_id_TiepTuc" onclick="handleOnclickNext()"
+                            class="notification_and_result_btn displayNone ">
+                            Tiếp tục
+                        </button>
+                        <button id="btn_result_id_HocMucKhac" onclick="handleOnclickNextLearnOr()"
+                            class="notification_and_result_btn displayNone ">
+                            Học mục khác
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </container>
+    <footer class="footer">
+
+        <ul class="footer_ul_One">
+            <li class="footer_li">
+                <h1 class="footer_li_title">Học Tiếng Anh toàn diện</h1>
+                <br>
+                <span class="footer_li_span">Học Tiếng Anh Online</span>
+                <br>
+                <span class="footer_li_span">Sách Tiếng Anh cơ bản</span>
+                <br>
+                <span class="footer_li_span">Khóa học Tiếng Anh căn bản</span>
+                <br>
+                <span class="footer_li_span">Kiểm tra trình độ Tiếng Anh</span>
+            </li>
+            <li class="footer_li">
+                <h1 class="footer_li_title">Học Tiếng Anh qua video</h1>
+                <br>
+                <span class="footer_li_span">Bài giảng Tiếng Anh</span>
+                <br>
+                <span class="footer_li_span">Học Tiếng Anh qua bài hát</span>
+                <br>
+                <span class="footer_li_span">Học Tiếng Anh qua phim</span>
+                <br>
+            </li>
+            <li class="footer_li">
+                <h1 class="footer_li_title">Blog học Tiếng Anh</h1>
+                <br>
+                <span class="footer_li_span">Giao tiếp Tiếng Anh</span>
+                <br>
+                <span class="footer_li_span">Ngữ pháp Tiếng Anh</span>
+                <br>
+                <span class="footer_li_span">Phát âm Tiếng Anh</span>
+                <br>
+                <span class="footer_li_span">Phiêu cùng Tiếng Anh</span>
+                <br>
+                <span class="footer_li_span">Phương pháp học Tiếng Anh</span>
+                <br>
+                <span class="footer_li_span">Thư viện TOEIC</span>
+                <br>
+                <span class="footer_li_span">Từ vựng Tiếng Anh</span>
+            </li>
+            <li class="footer_li">
+                <h1 class="footer_li_title">Học Tiếng Anh miễn phí</h1>
+                <br>
+                <span class="footer_li_span">Phần mềm học Tiếng Anh miễn phí</span>
+                <br>
+                <span class="footer_li_span">Thư viện video</span>
+            </li>
+        </ul>
+        <ul class="footer_ul_Two">
+            <h1 class="footer_li_Two_title">HHQ Learning English</h1>
+            <br>
+            <span class="footer_li_span">Địa chỉ: Số 05A, Đường Lý Chính Thắng, Hợp Thành 2, Phường Thống Nhất, T.X Buôn
+                Hồ, Tỉnh Đắk Lắk </span>
+            <br>
+            <span class="footer_li_span">Hotline: 094 170 3743 | Email: hahoangquan2@gmai.com | Website:
+                https://hhq.edu.vn</span>
+            <br>
+            <span class="footer_li_span">©2018 HHQ Education. All rights reserved.</span>
+        </ul>
+    </footer>
+    <honors id="honors_id" class="honors displayNone">
+        <div class="container_honors">
+            <div onclick="handleCloseHonors()" id="honors_close_id" class="honors_close">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+            <div class="container_honors_header">
+                <span class="container_honors_header_span">Bảng danh hiệu</span>
+            </div>
+            <div class="ngan_cach">
+            </div>
+            <div class="content_honors">
+                <img class="content_honors_img" src="../public/image/medal/1.png" alt="">
+                <span class="content_honors_span">Level 0 : Novice 1</span>
+            </div>
+            <div class="content_honors">
+                <img class="content_honors_img" src="../public/image/medal/2.png" alt="">
+                <span class="content_honors_span">Level 5 : Novice 2</span>
+            </div>
+            <div class="content_honors">
+                <img class="content_honors_img" src="../public/image/medal/3.png" alt="">
+                <span class="content_honors_span">Level 10 : Beginner 1</span>
+            </div>
+            <div class="content_honors">
+                <img class="content_honors_img" src="../public/image/medal/4.png" alt="">
+                <span class="content_honors_span">Level 15 : Beginner 2</span>
+            </div>
+            <div class="content_honors">
+                <img class="content_honors_img" src="../public/image/medal/5.png" alt="">
+                <span class="content_honors_span">Level 20 : Competent</span>
+            </div>
+            <div class="content_honors">
+                <img class="content_honors_img" src="../public/image/medal/6.png" alt="">
+                <span class="content_honors_span">Level 25 : Proficient</span>
+            </div>
+            <div class="content_honors">
+                <img class="content_honors_img" src="../public/image/medal/7.png" alt="">
+                <span class="content_honors_span">Level 30 : Expert 1</span>
+            </div>
+            <div class="content_honors">
+                <img class="content_honors_img" src="../public/image/medal/8.png" alt="">
+                <span class="content_honors_span">Level 35 : Expert 2</span>
+            </div>
+            <div class="content_honors">
+                <img class="content_honors_img" src="../public/image/medal/9.png" alt="">
+                <span class="content_honors_span">Level 40 : Master 1</span>
+            </div>
+            <div class="content_honors">
+                <img class="content_honors_img" src="../public/image/medal/10.png" alt="">
+                <span class="content_honors_span">Level 45 : Master 2</span>
+            </div>
+            <div class="content_honors">
+                <img class="content_honors_img" src="../public/image/medal/11.png" alt="">
+                <span class="content_honors_span">Level 50 : Professor</span>
+            </div>
+
+        </div>
+    </honors>
+</body>
+
+</html>
